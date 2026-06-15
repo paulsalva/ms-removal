@@ -90,3 +90,56 @@ h3{font-size:clamp(1.55rem,2.5vw,2.35rem)}
 .btn-dark{background:#081003;color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.22)}
 .btn-dark:hover{box-shadow:0 18px 38px rgba(0,0,0,.28)}
 @media (max-width:900px){.hero-image-card img{min-height:260px}.service-area-card{padding:28px}}
+
+/* Header image treatment for landing pages */
+.image-hero{
+  position:relative;
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  background-size:cover;
+  background-position:center;
+  isolation:isolate;
+  padding:118px 0;
+}
+.image-hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(5,6,7,.92) 0%,rgba(5,6,7,.72) 42%,rgba(5,6,7,.22) 100%);
+  z-index:-1;
+}
+.image-hero:after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:160px;
+  background:linear-gradient(180deg,transparent,rgba(5,6,7,.72));
+  z-index:-1;
+}
+.hero-construction{background-image:url('images/construction-cleanup.webp')}
+.hero-yard{background-image:url('images/yard-cleanup.webp')}
+.hero-property{background-image:url('images/property-cleanup.webp')}
+.image-hero .hero-grid{display:block;max-width:780px;margin:0}
+.image-hero .hero-copy{background:rgba(5,6,7,.52);border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:clamp(28px,5vw,54px);box-shadow:0 24px 70px rgba(0,0,0,.28);backdrop-filter:blur(4px)}
+.image-hero h1{max-width:760px}
+
+/* Smaller home header banner */
+.home-header .header-inner{min-height:118px;padding:20px 0 18px;gap:12px}
+.home-header .logo-link{width:min(560px,78vw)}
+.home-header .site-logo{max-height:86px;object-fit:contain}
+.home-header .header-actions{gap:10px}
+
+@media (max-width:900px){
+  .image-hero{min-height:560px;padding:84px 0;background-position:center}
+  .image-hero:before{background:linear-gradient(90deg,rgba(5,6,7,.92),rgba(5,6,7,.6))}
+  .image-hero .hero-copy{padding:28px;border-radius:24px}
+  .home-header .header-inner{min-height:104px;padding:18px 0 16px}
+  .home-header .logo-link{width:min(520px,84vw)}
+}
+@media (max-width:560px){
+  .image-hero{min-height:520px;padding:64px 0;background-position:center}
+  .image-hero .hero-copy{padding:22px}
+  .home-header .header-inner{padding:16px 0 14px}
+  .home-header .site-logo{max-height:70px}
+}
