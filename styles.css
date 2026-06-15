@@ -143,3 +143,120 @@ h3{font-size:clamp(1.55rem,2.5vw,2.35rem)}
   .home-header .header-inner{padding:16px 0 14px}
   .home-header .site-logo{max-height:70px}
 }
+
+
+/* Landing page top artwork banners */
+.landing-header .header-inner{display:none}
+.header-art{
+  min-height:clamp(260px,42vw,520px);
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  display:flex;
+  align-items:flex-start;
+  border-bottom:1px solid rgba(255,255,255,.16);
+}
+.header-art:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(5,6,7,.16),rgba(5,6,7,.04) 42%,rgba(5,6,7,.42));
+  pointer-events:none;
+}
+.header-art-inner{
+  position:relative;
+  z-index:1;
+  display:flex;
+  justify-content:flex-end;
+  padding-top:22px;
+}
+.header-actions-float{
+  background:rgba(5,6,7,.68);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  padding:8px 10px 8px 18px;
+  backdrop-filter:blur(8px);
+  box-shadow:0 14px 38px rgba(0,0,0,.22);
+}
+.page-construction-header .header-art{background-image:url('images/construction-cleanup.webp')}
+.page-yard-header .header-art{background-image:url('images/yard-cleanup.webp')}
+.page-property-header .header-art{background-image:url('images/property-cleanup.webp')}
+
+/* The page hero returns to a clean text section below the artwork banner. */
+.service-hero .hero-grid{display:grid;grid-template-columns:1fr;max-width:none;margin:0 auto}
+.service-hero .hero-copy{max-width:980px;background:transparent;border:0;border-radius:0;padding:0;box-shadow:none;backdrop-filter:none}
+
+@media (max-width:900px){
+  .header-art{min-height:clamp(220px,58vw,420px);background-position:center}
+  .header-art-inner{justify-content:center;padding-top:16px}
+  .header-actions-float{border-radius:24px;justify-content:center}
+}
+@media (max-width:560px){
+  .header-art{min-height:230px}
+  .header-actions-float{display:grid;width:min(360px,92vw);padding:12px;background:rgba(5,6,7,.76)}
+}
+
+/* Final home header layout: text logo left, CTA center, icon logo right */
+.home-header .header-inner{
+  min-height:150px;
+  padding:24px 0 22px;
+  display:grid;
+  grid-template-columns:minmax(260px, 1fr) auto minmax(150px, 1fr);
+  align-items:center;
+  gap:28px;
+  text-align:left;
+}
+.home-header .logo-link{
+  width:min(560px, 100%);
+  justify-self:start;
+}
+.home-header .site-logo{
+  max-height:104px;
+  width:100%;
+  object-fit:contain;
+  object-position:left center;
+}
+.home-header .header-actions{
+  justify-self:center;
+  justify-content:center;
+  gap:10px;
+}
+.header-icon-link{
+  justify-self:end;
+  display:block;
+  width:min(170px, 18vw);
+}
+.header-icon-logo{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.site-footer .footer-inner{
+  grid-template-columns:150px 1fr;
+}
+.site-footer .footer-inner nav{
+  justify-content:flex-end;
+}
+@media (max-width:900px){
+  .home-header .header-inner{
+    min-height:auto;
+    grid-template-columns:1fr;
+    gap:16px;
+    text-align:center;
+    padding:24px 0 20px;
+  }
+  .home-header .logo-link,
+  .home-header .header-actions,
+  .header-icon-link{
+    justify-self:center;
+  }
+  .home-header .logo-link{width:min(620px,88vw)}
+  .home-header .site-logo{max-height:96px;object-position:center}
+  .header-icon-link{width:120px}
+  .site-footer .footer-inner{grid-template-columns:1fr;text-align:left}
+  .site-footer .footer-inner nav{justify-content:flex-start}
+}
+@media (max-width:560px){
+  .home-header .site-logo{max-height:78px}
+  .header-icon-link{width:92px}
+}
