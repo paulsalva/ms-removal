@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MS Removal | Hauling, Cleanup & Debris Removal</title>
+  <meta name="description" content="MS Removal provides hauling, cleanup, construction debris removal, brush removal, material delivery, and property cleanout services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-link" href="index.html" aria-label="MS Removal home">
+        <img src="images/ms-removal-logo.png" alt="MS Removal" class="site-logo" />
+      </a>
+      <div class="header-actions">
+        <a class="phone-link" href="tel:+10000000000">Call for a Quote</a>
+        <a class="btn btn-small" href="#quote">Get Free Quote</a>
+      </div>
+    </div>
+    <nav class="service-strip" aria-label="Primary services">
+      <a class="service-tile accent-lime" href="construction-debris.html">
+        <span class="tile-kicker">01</span>
+        <strong>Construction Debris Removal</strong>
+        <span>Concrete Disposal & Cleanup</span>
+      </a>
+      <a class="service-tile accent-cyan" href="tree-brush-removal.html">
+        <span class="tile-kicker">02</span>
+        <strong>Tree & Brush Removal</strong>
+        <span>Landscape Waste Removal • Material Delivery</span>
+      </a>
+      <a class="service-tile accent-orange" href="property-cleanouts.html">
+        <span class="tile-kicker">03</span>
+        <strong>Property Cleanouts</strong>
+        <span>Landlord Turnover Cleanup</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Family-owned hauling and cleanup</p>
+          <h1>Less Mess. Less Stress.</h1>
+          <p class="lead">MS Removal helps homeowners, contractors, landlords, and property owners clear out heavy debris, outdoor waste, unwanted items, and messy spaces without the hassle.</p>
+          <div class="hero-buttons">
+            <a class="btn" href="#quote">Get a Free Quote</a>
+            <a class="btn btn-ghost" href="#services">View Services</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>What do you need handled?</h2>
+          <ul class="check-list">
+            <li>Construction debris and concrete cleanup</li>
+            <li>Brush, branches, yard waste, dirt, stone, and gravel</li>
+            <li>Rental turnovers, property cleanouts, and unwanted junk</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Choose your service</p>
+          <h2>Built Around the Cleanup You Actually Need</h2>
+          <p>Instead of one generic junk removal page, each service has its own quote path so you can get clear answers faster.</p>
+        </div>
+        <div class="cards three-cards">
+          <article class="card card-lime">
+            <h3>Construction Debris & Concrete</h3>
+            <p>Cleanup for broken concrete, scrap materials, remodel debris, wood, drywall, tile, flooring, and job site mess.</p>
+            <a href="construction-debris.html">Construction Debris Page</a>
+          </article>
+          <article class="card card-cyan">
+            <h3>Tree, Brush & Material Hauling</h3>
+            <p>Outdoor debris removal, brush piles, branches, landscape waste, and delivery of gravel, dirt, stone, and materials.</p>
+            <a href="tree-brush-removal.html">Outdoor Cleanup Page</a>
+          </article>
+          <article class="card card-orange">
+            <h3>Property Cleanouts</h3>
+            <p>Cleanouts for landlords, property managers, homeowners, rental turnovers, garages, basements, and move-outs.</p>
+            <a href="property-cleanouts.html">Cleanout Page</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Simple process</p>
+          <h2>Send Details. Get a Quote. We Haul It Away.</h2>
+          <p>Tell us what needs to be removed or delivered, where it is located, and any access details. We will give you a straightforward quote and schedule the work.</p>
+        </div>
+        <div class="steps">
+          <div><span>1</span><strong>Send the job details</strong><p>Photos, item list, material type, volume, and location help us quote accurately.</p></div>
+          <div><span>2</span><strong>Approve the quote</strong><p>We confirm pricing, timing, access, and what is included before we start.</p></div>
+          <div><span>3</span><strong>Clear the mess</strong><p>Our team handles the loading, cleanup, and hauling so you do not have to.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quote">
+      <div class="container quote-panel">
+        <div>
+          <p class="eyebrow">Free quote</p>
+          <h2>Need Something Hauled Away?</h2>
+          <p>Use this form section as your GoHighLevel, Formspree, or Vercel form integration point. Replace the action URL when ready.</p>
+        </div>
+        <form class="quote-form" action="mailto:info@example.com" method="post" enctype="text/plain">
+          <label>Name<input type="text" name="name" placeholder="Your name" required></label>
+          <label>Phone<input type="tel" name="phone" placeholder="Your phone number" required></label>
+          <label>Service Needed<select name="service" required><option value="">Select one</option><option>Construction debris / concrete</option><option>Tree, brush, yard waste, delivery</option><option>Property cleanout / landlord turnover</option><option>Other hauling</option></select></label>
+          <label>Job Details<textarea name="details" rows="4" placeholder="What needs to be removed or delivered? Include location, material type, approximate amount, and timing."></textarea></label>
+          <button class="btn" type="submit">Request Quote</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="images/ms-removal-logo.png" alt="MS Removal" />
+      <div>
+        <strong>MS Removal</strong>
+        <p>Hauling, cleanup, debris removal, and material delivery. Less mess, less stress.</p>
+      </div>
+      <nav>
+        <a href="construction-debris.html">Construction</a>
+        <a href="tree-brush-removal.html">Tree & Brush</a>
+        <a href="property-cleanouts.html">Cleanouts</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
