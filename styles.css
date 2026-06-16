@@ -441,3 +441,38 @@ h3{font-size:clamp(1.55rem,2.5vw,2.35rem)}
   .header-art-inner{display:flex;gap:12px;align-items:flex-start;}
   .home-float-btn{width:46px;height:46px;border-width:7px;flex:0 0 auto;}
 }
+
+
+/* Final header adjustment: smaller cropped text logo, centered CTA, no home button on subpage art. */
+.home-header .logo-link,
+.landing-header .subpage-top-header .logo-link{
+  width:min(250px,100%);
+  justify-self:start;
+}
+.home-header .site-logo,
+.landing-header .subpage-top-header .site-logo{
+  max-height:64px;
+  width:100%;
+  object-fit:contain;
+  object-position:left center;
+}
+.home-header .header-inner,
+.landing-header .subpage-top-header .header-inner{
+  grid-template-columns:minmax(260px,1fr) auto minmax(260px,1fr);
+}
+.header-art-inner{
+  justify-content:flex-end;
+}
+.home-float-btn{
+  display:none;
+}
+@media (max-width:900px){
+  .home-header .logo-link,
+  .landing-header .subpage-top-header .logo-link{width:min(320px,72vw)}
+  .home-header .site-logo,
+  .landing-header .subpage-top-header .site-logo{max-height:72px;object-position:center}
+}
+@media (max-width:560px){
+  .home-header .site-logo,
+  .landing-header .subpage-top-header .site-logo{max-height:58px}
+}
