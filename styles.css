@@ -317,3 +317,127 @@ h3{font-size:clamp(1.55rem,2.5vw,2.35rem)}
   .home-header .site-logo{max-height:110px}
   .header-art .landing-logo-block{width:min(340px,78vw);padding:16px 20px}
 }
+
+
+/* Revision: cropped logo + subpage header changes */
+/* Keep the home logo strong but smaller now that the artwork is cropped, and keep the phone/CTA truly centered. */
+.home-header .header-inner{
+  min-height:150px;
+  padding:24px 0 22px;
+  display:grid;
+  grid-template-columns:minmax(260px,1fr) auto minmax(260px,1fr);
+  align-items:center;
+  gap:28px;
+  text-align:left;
+}
+.home-header .logo-link{
+  width:min(430px,100%);
+  justify-self:start;
+}
+.home-header .site-logo{
+  max-height:118px;
+  width:100%;
+  object-fit:contain;
+  object-position:left center;
+}
+.home-header .header-actions{
+  justify-self:center;
+}
+.home-header .header-icon-link{
+  justify-self:end;
+  width:min(170px,18vw);
+}
+
+/* Subpages use the same top brand header as the homepage. */
+.landing-header .subpage-top-header .header-inner{
+  min-height:150px;
+  padding:24px 0 22px;
+  display:grid;
+  grid-template-columns:minmax(260px,1fr) auto minmax(260px,1fr);
+  align-items:center;
+  gap:28px;
+  text-align:left;
+}
+.landing-header .subpage-top-header .logo-link{
+  width:min(430px,100%);
+  justify-self:start;
+}
+.landing-header .subpage-top-header .site-logo{
+  max-height:118px;
+  width:100%;
+  object-fit:contain;
+  object-position:left center;
+}
+.landing-header .subpage-top-header .header-actions{
+  justify-self:center;
+}
+.landing-header .subpage-top-header .header-icon-link{
+  justify-self:end;
+  width:min(170px,18vw);
+}
+
+/* Remove the centered logo overlay from subpage artwork blocks. */
+.header-art .landing-logo-block{display:none;}
+.header-art-inner{
+  justify-content:space-between;
+  align-items:flex-start;
+  width:min(1160px,92vw);
+}
+.home-float-btn{
+  position:relative;
+  z-index:3;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;
+  height:48px;
+  border-radius:999px;
+  color:#081003;
+  background:linear-gradient(135deg,var(--lime),#c8f05f);
+  border:8px solid rgba(5,6,7,.72);
+  box-shadow:0 12px 30px rgba(135,200,32,.26),0 14px 38px rgba(0,0,0,.22);
+  backdrop-filter:blur(8px);
+}
+.home-float-btn svg{
+  width:22px;
+  height:22px;
+}
+.bottom-service-strip{
+  margin:0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+@media (max-width:900px){
+  .home-header .header-inner,
+  .landing-header .subpage-top-header .header-inner{
+    min-height:auto;
+    grid-template-columns:1fr;
+    gap:16px;
+    text-align:center;
+    padding:24px 0 20px;
+  }
+  .home-header .logo-link,
+  .home-header .header-actions,
+  .home-header .header-icon-link,
+  .landing-header .subpage-top-header .logo-link,
+  .landing-header .subpage-top-header .header-actions,
+  .landing-header .subpage-top-header .header-icon-link{
+    justify-self:center;
+  }
+  .home-header .logo-link,
+  .landing-header .subpage-top-header .logo-link{width:min(500px,86vw)}
+  .home-header .site-logo,
+  .landing-header .subpage-top-header .site-logo{max-height:104px;object-position:center}
+  .home-header .header-icon-link,
+  .landing-header .subpage-top-header .header-icon-link{width:120px}
+  .header-art-inner{justify-content:space-between;padding-top:16px;}
+}
+@media (max-width:560px){
+  .home-header .site-logo,
+  .landing-header .subpage-top-header .site-logo{max-height:82px}
+  .home-header .header-icon-link,
+  .landing-header .subpage-top-header .header-icon-link{width:92px}
+  .header-art-inner{display:flex;gap:12px;align-items:flex-start;}
+  .home-float-btn{width:46px;height:46px;border-width:7px;flex:0 0 auto;}
+}
