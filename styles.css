@@ -476,3 +476,40 @@ h3{font-size:clamp(1.55rem,2.5vw,2.35rem)}
   .home-header .site-logo,
   .landing-header .subpage-top-header .site-logo{max-height:58px}
 }
+
+
+/* Revision: subpage image hero blocks sit below the text title block and contain no overlay content. */
+.subpage-image-block{
+  min-height:clamp(300px,44vw,560px);
+  border-top:1px solid rgba(255,255,255,.16);
+  border-bottom:1px solid rgba(255,255,255,.16);
+}
+.subpage-image-block:after{
+  background:linear-gradient(180deg,rgba(5,6,7,.08),rgba(5,6,7,.02) 45%,rgba(5,6,7,.2));
+}
+
+/* Home page only: invert the top service selection cards to lighter panels with dark text. */
+.home-header .service-strip{
+  background:#eef2f2;
+  border-top:1px solid rgba(5,6,7,.14);
+  border-bottom:1px solid rgba(5,6,7,.14);
+}
+.home-header .service-tile{
+  background:#f7f9f9;
+  color:#081003;
+  border-right:1px solid rgba(5,6,7,.14);
+}
+.home-header .service-tile:last-child{border-right:0;}
+.home-header .service-tile strong{color:#081003;}
+.home-header .service-tile span:not(.tile-kicker){color:#263036;}
+.home-header .service-tile:after{opacity:.18;}
+.home-header .service-tile:hover,
+.home-header .service-tile.active{
+  background:#ffffff;
+  color:#081003;
+}
+.home-header .service-tile:hover:after,
+.home-header .service-tile.active:after{opacity:.28;}
+@media (max-width:900px){
+  .home-header .service-tile{border-right:0;border-bottom:1px solid rgba(5,6,7,.14);}
+}
