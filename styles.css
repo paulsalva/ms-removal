@@ -107,6 +107,15 @@ a.card:hover .card-cta{color:var(--accent,var(--ink))}
 .subpage-image-block.yard-scene{background-image:url("images/yard-cleanup.webp")}
 .subpage-image-block.property-scene{background-image:url("images/property-cleanup.webp")}
 
+/* Local pride banner above the footer */
+.local-banner{background:linear-gradient(135deg,var(--lime),#c8f05f);color:#081003;padding:74px 0}
+.local-banner .container{max-width:860px;text-align:center}
+.local-banner .eyebrow{color:#0c1c06}
+.local-banner h2{margin:0 0 18px;color:#081003;font-size:clamp(1.9rem,4vw,3rem);line-height:1.04}
+.local-banner p{margin:0 auto;max-width:680px;color:#13260a;font-weight:600;font-size:1.08rem;line-height:1.6}
+.local-banner .local-area{margin-top:20px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:1rem;color:#0c1c06}
+@media (max-width:560px){.local-banner{padding:54px 0}}
+
 /* Footer with business info + social links */
 .footer-inner{grid-template-columns:150px 1fr auto;gap:28px;align-items:center}
 .footer-about p{margin:0 0 4px;color:#cbd2d4;font-weight:600;font-size:.9rem}
