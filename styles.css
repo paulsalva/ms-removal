@@ -107,6 +107,21 @@ a.card:hover .card-cta{color:var(--accent,var(--ink))}
 .subpage-image-block.yard-scene{background-image:url("images/yard-cleanup.webp")}
 .subpage-image-block.property-scene{background-image:url("images/property-cleanup.webp")}
 
+/* Before & after gallery on service pages */
+.ba-section{padding:86px 0;background:var(--paper)}
+.ba-grid{display:grid;gap:34px;margin-top:38px}
+.ba-row{background:var(--white);border:1px solid var(--line-dark);border-radius:26px;padding:clamp(18px,3vw,28px);box-shadow:0 14px 40px rgba(0,0,0,.08)}
+.ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ba-item{position:relative}
+.ba-item img{width:100%;height:clamp(200px,26vw,320px);object-fit:cover;border-radius:18px;border:1px solid var(--line-dark)}
+.ba-tag{position:absolute;top:12px;left:12px;background:rgba(5,6,7,.82);color:#fff;font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;padding:7px 12px;border-radius:999px}
+.ba-item.is-after .ba-tag{background:linear-gradient(135deg,var(--lime),#c8f05f);color:#081003}
+.ba-caption{margin:18px 2px 0}
+.ba-caption strong{display:block;font-family:AntonLocal,Impact,sans-serif;font-size:1.35rem;text-transform:uppercase;line-height:1.05}
+.ba-caption p{margin:6px 0 0;color:var(--soft-ink);font-weight:600;font-size:.98rem}
+@media (max-width:700px){.ba-pair{grid-template-columns:1fr}.ba-item img{height:clamp(220px,60vw,300px)}}
+@media (max-width:560px){.ba-section{padding:62px 0}}
+
 /* Local pride banner above the footer */
 .local-banner{background:linear-gradient(135deg,var(--lime),#c8f05f);color:#081003;padding:74px 0}
 .local-banner .container{max-width:860px;text-align:center}
