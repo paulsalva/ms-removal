@@ -69,12 +69,27 @@ h3{font-size:clamp(1.55rem,2.5vw,2.35rem)}
 
 /* Updated header/nav and quote placement */
 .service-strip{display:none}
-.quote-section{background:linear-gradient(135deg,var(--lime),#c8f05f);padding:86px 0}
+
+/* Header: tighter padding + right-sized logo */
+.site-header .header-inner{min-height:auto;padding:22px 0}
+.home-header .logo-link{width:min(340px,30vw)}
+.compact .logo-link{width:min(300px,24vw)}
+
+/* Free quote section sits right after the header with a photo background; form card stays white */
+.quote-section{position:relative;padding:80px 0;background:url("images/property-cleanup.webp") center/cover no-repeat}
+.quote-section:before{content:"";position:absolute;inset:0;background:rgba(5,6,7,.55)}
+.quote-section > .container{position:relative;z-index:1}
 .quote-section .quote-panel{background:#fff}
-.quote-section .btn,.quote-panel .btn{color:#fff}
+.quote-section .quote-panel .btn{color:#fff}
 .form-callout{margin:2px 0 0;color:var(--soft-ink);font-weight:800}
 .form-callout a{text-decoration:underline}
 .footer-inner{grid-template-columns:170px 1fr}
-.home-header .logo-link{width:min(640px,38vw)}
-@media (max-width:900px){.header-inner{grid-template-columns:1fr;gap:18px;text-align:center}.logo-link,.compact .logo-link,.home-header .logo-link{width:min(560px,88vw);margin:0 auto}.header-nav{justify-content:center}.quote-section{padding:62px 0}.footer-inner{grid-template-columns:1fr}}
-@media (max-width:560px){.header-inner{display:grid;padding:24px 0}.header-nav{gap:12px}.header-nav a{font-size:.72rem}.logo-link,.compact .logo-link,.home-header .logo-link{width:min(420px,88vw)}}
+
+/* Service cards are fully clickable */
+a.card{display:block;color:inherit;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+a.card:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(0,0,0,.16)}
+.card-cta{display:inline-block;margin-top:16px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;color:#111}
+a.card:hover .card-cta{color:var(--accent,var(--ink))}
+
+@media (max-width:900px){.header-inner{grid-template-columns:1fr;gap:18px;text-align:center}.logo-link,.compact .logo-link,.home-header .logo-link{width:min(360px,72vw);margin:0 auto}.header-nav{justify-content:center}.quote-section{padding:56px 0}.footer-inner{grid-template-columns:1fr}}
+@media (max-width:560px){.header-inner{display:grid;padding:20px 0}.header-nav{gap:12px}.header-nav a{font-size:.72rem}.logo-link,.compact .logo-link,.home-header .logo-link{width:min(280px,72vw)}}
