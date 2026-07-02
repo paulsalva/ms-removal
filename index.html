@@ -34,7 +34,19 @@
   </header>
 
   <main>
-    <section class="hero hero-home" id="home">
+    <section class="home-slideshow" id="home" aria-label="MS Removal family-owned and operated slideshow">
+      <div class="home-slide home-slide-property" aria-hidden="true"></div>
+      <div class="home-slide home-slide-construction" aria-hidden="true"></div>
+      <div class="home-slide home-slide-yard" aria-hidden="true"></div>
+      <div class="home-slide home-slide-cleanout" aria-hidden="true"></div>
+      <div class="home-slideshow-overlay">
+        <p class="eyebrow">Family-owned and operated</p>
+        <h1>Serving Southeast Wisconsin with Hard Work and Pride</h1>
+        <p>Cleanup, hauling, and outdoor services from a local family business built on sacrifice, trust, and showing up for every job.</p>
+      </div>
+    </section>
+
+    <section class="hero hero-home intro-hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Family-owned hauling, cleanup and outdoor services</p>
@@ -60,12 +72,12 @@
         </div>
 
         <div class="cards three-cards service-card-row">
-          <a class="card card-lime" href="construction-debris.html">
+          <a class="card card-orange" href="construction-debris.html">
             <h3>Construction Debris & Concrete</h3>
             <p>Cleanup for broken concrete, scrap materials, remodel debris, wood, drywall, tile, flooring, and job site mess.</p>
             <span class="card-cta">Construction Debris Page</span>
           </a>
-          <a class="card card-cyan" href="tree-brush-removal.html">
+          <a class="card card-orange" href="tree-brush-removal.html">
             <h3>Tree, Brush & Material Hauling</h3>
             <p>Outdoor debris removal, brush piles, branches, landscape waste, and delivery of gravel, dirt, stone, and materials.</p>
             <span class="card-cta">Outdoor Cleanup Page</span>
@@ -84,11 +96,11 @@
             <p>Need help keeping the outside of your property clean, safe, and looking sharp? We also offer practical outdoor services for homes and properties.</p>
           </div>
           <div class="cards three-cards">
-            <article class="card card-cyan">
+            <article class="card card-orange">
               <h3>Snow Removal</h3>
               <p>Driveway, walkway, and property snow clearing help when winter weather gets in the way.</p>
             </article>
-            <article class="card card-lime">
+            <article class="card card-orange">
               <h3>Lawn Care</h3>
               <p>Mowing, trimming, and basic lawn maintenance to keep your property clean and cared for.</p>
             </article>
@@ -110,8 +122,8 @@
           <div class="who-copy">
             <p class="eyebrow">Who we are</p>
             <h2>Built on Family, Work Ethic and Sacrifice</h2>
-            <p>MS Removal is a family business built by a first-generation entrepreneur who understands what hard work means. The company was started with family and friends involved from the beginning, and it carries the work ethic passed down from an immigrant father who woke up early, pushed through every situation, and risked everything to provide for his family.</p>
-            <p>That example is the reason behind the business. Every job is handled with pride, respect, and a simple goal: do honest work, take care of people, and build something that honors the sacrifices that made it possible.</p>
+            <p>MS Removal is led by a first-generation entrepreneur who brought family and friends into the business because this was never meant to be just a job. It was built from the example of an immigrant father who woke up early no matter the situation, worked through hardship, and risked everything to provide for his family.</p>
+            <p>That history is the owner&apos;s why: to repay that sacrifice, create opportunity for the people closest to him, and one day help give his father the chance to live his own dream. Every job is handled with pride, respect, and the same work ethic that started it all.</p>
           </div>
         </div>
 
@@ -125,7 +137,7 @@
             <article class="crew-card">
               <div class="crew-photo placeholder-photo"><span>Crew photo</span></div>
               <h3>Founder</h3>
-              <p>First-generation entrepreneur leading the work with pride.</p>
+              <p>First-generation entrepreneur building the business around family, sacrifice, and honest work.</p>
             </article>
             <article class="crew-card">
               <div class="crew-photo placeholder-photo"><span>Crew photo</span></div>
@@ -152,7 +164,7 @@
         <div class="spanish-card">
           <p class="eyebrow">Hablamos Español</p>
           <h2>Bienvenidos a MS Removal</h2>
-          <p>Somos un negocio familiar y estamos aquí para ayudarle con limpieza, remoción de escombros, mantenimiento exterior, snow removal, lawn care y power washing. Llámenos o mándenos un mensaje para una cotización gratis.</p>
+          <p>Somos un negocio familiar y estamos aquí para ayudarle con limpieza, remoción de escombros, mantenimiento exterior, retiro de nieve, cuidado de césped y lavado a presión. Llámenos o mándenos un mensaje para una cotización gratis.</p>
           <a class="btn" href="#contact">Solicite una cotización</a>
         </div>
       </div>
@@ -174,22 +186,19 @@
           <h2>Before and After Project Photos</h2>
           <p>Use this section for real job photos as they come in. The placeholders below are ready for construction debris, outdoor cleanup, property cleanouts, and crew photos.</p>
         </div>
-        <div class="gallery-grid">
-          <article class="gallery-card">
-            <div class="gallery-placeholder placeholder-photo"><span>Before photo</span></div>
-            <div class="gallery-placeholder placeholder-photo"><span>After photo</span></div>
+        <div class="gallery-grid scene-gallery-grid">
+          <article class="gallery-card scene-gallery-card">
+            <div class="gallery-scene gallery-scene-construction" role="img" aria-label="Construction debris cleanup image"></div>
             <h3>Construction Debris</h3>
             <p>Concrete, remodel debris, and job site cleanup photos.</p>
           </article>
-          <article class="gallery-card">
-            <div class="gallery-placeholder placeholder-photo"><span>Before photo</span></div>
-            <div class="gallery-placeholder placeholder-photo"><span>After photo</span></div>
+          <article class="gallery-card scene-gallery-card">
+            <div class="gallery-scene gallery-scene-yard" role="img" aria-label="Outdoor cleanup image"></div>
             <h3>Outdoor Cleanup</h3>
             <p>Brush removal, yard waste, lawn care, power washing, and snow work.</p>
           </article>
-          <article class="gallery-card">
-            <div class="gallery-placeholder placeholder-photo"><span>Before photo</span></div>
-            <div class="gallery-placeholder placeholder-photo"><span>After photo</span></div>
+          <article class="gallery-card scene-gallery-card">
+            <div class="gallery-scene gallery-scene-property" role="img" aria-label="Property cleanout image"></div>
             <h3>Property Cleanouts</h3>
             <p>Garages, basements, rentals, move-outs, and full property cleanups.</p>
           </article>
