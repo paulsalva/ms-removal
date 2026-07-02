@@ -35,10 +35,10 @@
 
   <main>
     <section class="home-slideshow" id="home" aria-label="MS Removal family-owned and operated slideshow">
-      <div class="home-slide home-slide-property" aria-hidden="true"></div>
-      <div class="home-slide home-slide-construction" aria-hidden="true"></div>
-      <div class="home-slide home-slide-yard" aria-hidden="true"></div>
-      <div class="home-slide home-slide-cleanout" aria-hidden="true"></div>
+      <div class="home-slide home-slide-placeholder home-slide-placeholder-1" aria-hidden="true"></div>
+      <div class="home-slide home-slide-placeholder home-slide-placeholder-2" aria-hidden="true"></div>
+      <div class="home-slide home-slide-placeholder home-slide-placeholder-3" aria-hidden="true"></div>
+      <div class="home-slide home-slide-placeholder home-slide-placeholder-4" aria-hidden="true"></div>
       <div class="home-slideshow-overlay">
         <p class="eyebrow">Family-owned and operated</p>
         <h1>Serving Southeast Wisconsin with Hard Work and Pride</h1>
@@ -72,20 +72,32 @@
         </div>
 
         <div class="cards three-cards service-card-row">
-          <a class="card card-orange" href="construction-debris.html">
-            <h3>Construction Debris & Concrete</h3>
-            <p>Cleanup for broken concrete, scrap materials, remodel debris, wood, drywall, tile, flooring, and job site mess.</p>
-            <span class="card-cta">Construction Debris Page</span>
+          <a class="card card-orange service-image-card service-image-construction" href="construction-debris.html">
+            <span class="service-image-overlay" aria-hidden="true"></span>
+            <span class="service-image-content">
+              <span class="service-kicker">Cleanup Service</span>
+              <h3>Construction Debris & Concrete</h3>
+              <p>Cleanup for broken concrete, scrap materials, remodel debris, wood, drywall, tile, flooring, and job site mess.</p>
+              <span class="card-cta">Construction Debris Page</span>
+            </span>
           </a>
-          <a class="card card-orange" href="tree-brush-removal.html">
-            <h3>Tree, Brush & Material Hauling</h3>
-            <p>Outdoor debris removal, brush piles, branches, landscape waste, and delivery of gravel, dirt, stone, and materials.</p>
-            <span class="card-cta">Outdoor Cleanup Page</span>
+          <a class="card card-orange service-image-card service-image-yard" href="tree-brush-removal.html">
+            <span class="service-image-overlay" aria-hidden="true"></span>
+            <span class="service-image-content">
+              <span class="service-kicker">Outdoor Cleanup</span>
+              <h3>Tree, Brush & Material Hauling</h3>
+              <p>Outdoor debris removal, brush piles, branches, landscape waste, and delivery of gravel, dirt, stone, and materials.</p>
+              <span class="card-cta">Outdoor Cleanup Page</span>
+            </span>
           </a>
-          <a class="card card-orange" href="property-cleanouts.html">
-            <h3>Property Cleanouts</h3>
-            <p>Cleanouts for landlords, property managers, homeowners, rental turnovers, garages, basements, and move-outs.</p>
-            <span class="card-cta">Cleanout Page</span>
+          <a class="card card-orange service-image-card service-image-property" href="property-cleanouts.html">
+            <span class="service-image-overlay" aria-hidden="true"></span>
+            <span class="service-image-content">
+              <span class="service-kicker">Cleanout Service</span>
+              <h3>Property Cleanouts</h3>
+              <p>Cleanouts for landlords, property managers, homeowners, rental turnovers, garages, basements, and move-outs.</p>
+              <span class="card-cta">Cleanout Page</span>
+            </span>
           </a>
         </div>
 
@@ -95,16 +107,25 @@
             <h2>Seasonal Property Care</h2>
             <p>Need help keeping the outside of your property clean, safe, and looking sharp? We also offer practical outdoor services for homes and properties.</p>
           </div>
-          <div class="cards three-cards">
-            <article class="card card-orange">
+          <div class="seasonal-icon-grid">
+            <article class="seasonal-icon-item">
+              <div class="seasonal-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false"><path d="M32 9v46M16 17l32 30M48 17 16 47M11 32h42M22 13l10 10 10-10M22 51l10-10 10 10M13 22l14 1-1-14M51 42l-14-1 1 14M51 22l-14 1 1-14M13 42l14-1-1 14"/></svg>
+              </div>
               <h3>Snow Removal</h3>
               <p>Driveway, walkway, and property snow clearing help when winter weather gets in the way.</p>
             </article>
-            <article class="card card-orange">
+            <article class="seasonal-icon-item">
+              <div class="seasonal-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false"><path d="M10 52h44M18 52c1-11 4-21 11-31 2 12 1 22-1 31M34 52c2-12 7-24 16-34 1 14-2 25-7 34M23 52c-4-10-5-20-2-32 7 9 10 19 10 32"/></svg>
+              </div>
               <h3>Lawn Care</h3>
               <p>Mowing, trimming, and basic lawn maintenance to keep your property clean and cared for.</p>
             </article>
-            <article class="card card-orange">
+            <article class="seasonal-icon-item">
+              <div class="seasonal-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false"><path d="M15 47l16-16 6 6-16 16-6-6ZM35 27l7-7 8 8-7 7M42 20l5-5 8 8-5 5M9 25c7-7 14-11 23-13M8 36c8-3 16-5 25-4M30 9c-4 8-6 16-6 25"/></svg>
+              </div>
               <h3>Power Washing</h3>
               <p>Exterior cleaning for driveways, walkways, patios, siding, and surfaces that need a fresh reset.</p>
             </article>
@@ -124,36 +145,6 @@
             <h2>Built on Family, Work Ethic and Sacrifice</h2>
             <p>MS Removal is led by a first-generation entrepreneur who brought family and friends into the business because this was never meant to be just a job. It was built from the example of an immigrant father who woke up early no matter the situation, worked through hardship, and risked everything to provide for his family.</p>
             <p>That history is the owner&apos;s why: to repay that sacrifice, create opportunity for the people closest to him, and one day help give his father the chance to live his own dream. Every job is handled with pride, respect, and the same work ethic that started it all.</p>
-          </div>
-        </div>
-
-        <div class="family-crew-block">
-          <div class="section-heading compact-heading">
-            <p class="eyebrow">Family business</p>
-            <h2>The Crew Behind the Cleanup</h2>
-            <p>Photo placeholders are set up for real crew images when they are ready.</p>
-          </div>
-          <div class="crew-grid">
-            <article class="crew-card">
-              <div class="crew-photo placeholder-photo"><span>Crew photo</span></div>
-              <h3>Founder</h3>
-              <p>First-generation entrepreneur building the business around family, sacrifice, and honest work.</p>
-            </article>
-            <article class="crew-card">
-              <div class="crew-photo placeholder-photo"><span>Crew photo</span></div>
-              <h3>Family</h3>
-              <p>Family support and values behind every step of the business.</p>
-            </article>
-            <article class="crew-card">
-              <div class="crew-photo placeholder-photo"><span>Crew photo</span></div>
-              <h3>Friends</h3>
-              <p>A trusted team built around real relationships and hard work.</p>
-            </article>
-            <article class="crew-card">
-              <div class="crew-photo placeholder-photo"><span>Crew photo</span></div>
-              <h3>Field Team</h3>
-              <p>The people showing up, hauling, cleaning, and getting it done.</p>
-            </article>
           </div>
         </div>
       </div>
@@ -184,7 +175,7 @@
         <div class="section-heading">
           <p class="eyebrow">Gallery</p>
           <h2>Before and After Project Photos</h2>
-          <p>Use this section for real job photos as they come in. The placeholders below are ready for construction debris, outdoor cleanup, property cleanouts, and crew photos.</p>
+          <p>Use this section for real job photos as they come in. The placeholders below are ready for construction debris, outdoor cleanup, property cleanouts, and before-and-after job photos.</p>
         </div>
         <div class="gallery-grid scene-gallery-grid">
           <article class="gallery-card scene-gallery-card">
