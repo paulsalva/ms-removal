@@ -1026,7 +1026,7 @@ section[id],
   .site-header .header-inner{padding:12px 0}
   .logo-link,
   .compact .logo-link,
-  .home-header .logo-link{width:min(210px,62vw)}
+  .home-header .logo-link{width:min(147px,44vw)}
   .nav-toggle{width:46px;height:42px}
   .home-ba-pair{grid-template-columns:1fr 1fr}
   .home-ba-item img{height:180px}
@@ -1238,7 +1238,8 @@ section[id],
 .platform-link img{
   width:24px;
   height:24px;
-  filter:brightness(0) invert(1);
+  filter:brightness(0) invert(1) saturate(1.2);
+  opacity:.95;
 }
 @media (max-width:700px){
   .reviews-footer{
