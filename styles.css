@@ -663,3 +663,172 @@ a.card:hover .card-cta{
   .seasonal-icon-grid{grid-template-columns:1fr;gap:34px}
   .seasonal-icon-item{padding:0}
 }
+
+/* Requested homepage refinements: intro first, small slideshow card, photo service cards, gallery placeholders */
+.home-slideshow{
+  min-height:clamp(360px,56.25vw,760px);
+  max-height:none;
+}
+.home-slide:after{
+  background:linear-gradient(90deg,rgba(5,6,7,.22),rgba(5,6,7,.08) 42%,rgba(5,6,7,.16)),linear-gradient(180deg,rgba(5,6,7,.05),rgba(5,6,7,.30));
+}
+.home-slideshow-overlay{
+  inset:auto auto clamp(20px,3vw,42px) clamp(20px,4vw,58px);
+  width:min(420px,calc(100vw - 40px));
+  padding:18px 20px 20px;
+  background:rgba(5,6,7,.72);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:20px;
+  box-shadow:0 18px 46px rgba(0,0,0,.30);
+  backdrop-filter:blur(8px);
+}
+.home-slideshow-overlay .eyebrow{
+  margin-bottom:8px;
+  font-size:.66rem;
+  letter-spacing:.14em;
+}
+.home-slideshow-overlay h2{
+  font-size:clamp(1.45rem,2vw,2.2rem);
+  line-height:1.05;
+  max-width:360px;
+  color:#fff;
+}
+.home-slideshow-overlay p:not(.eyebrow){
+  margin:10px 0 0;
+  max-width:350px;
+  color:#edf1f2;
+  font-size:.92rem;
+  line-height:1.45;
+  font-weight:700;
+}
+
+.service-preview-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  align-items:stretch;
+}
+.service-preview-card{
+  display:block;
+  background:#fff;
+  border:1px solid var(--line-dark);
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 14px 40px rgba(0,0,0,.08);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.service-preview-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 24px 56px rgba(0,0,0,.16);
+}
+.service-preview-image{
+  min-height:clamp(220px,19vw,320px);
+  background-size:cover;
+  background-position:center;
+  border-bottom:1px solid var(--line-dark);
+}
+.service-preview-construction{background-image:url("images/construction-cleanup.webp")}
+.service-preview-yard{background-image:url("images/yard-cleanup.webp")}
+.service-preview-property{background-image:url("images/property-cleanup.webp")}
+.service-preview-body{
+  padding:24px 26px 28px;
+}
+.service-preview-body h3{
+  color:var(--ink);
+  font-size:clamp(1.45rem,2.2vw,2.15rem);
+}
+.service-preview-body p{
+  margin:14px 0 0;
+  color:var(--soft-ink);
+  font-weight:700;
+}
+.service-preview-body .card-cta{
+  color:var(--orange);
+}
+.service-preview-card:hover .card-cta{
+  color:var(--orange);
+}
+
+.before-after-placeholder-grid{
+  align-items:stretch;
+}
+.before-after-placeholder-card{
+  display:block;
+  padding:0;
+  overflow:hidden;
+}
+.gallery-photo-placeholder{
+  position:relative;
+  min-height:clamp(220px,24vw,340px);
+  display:grid;
+  place-items:center;
+  background:
+    linear-gradient(135deg,rgba(229,154,57,.16),rgba(255,193,100,.09)),
+    repeating-linear-gradient(45deg,#eef2f2,#eef2f2 16px,#e2e8e8 16px,#e2e8e8 32px);
+  border-bottom:1px solid var(--line-dark);
+}
+.gallery-photo-placeholder:before{
+  content:"";
+  position:absolute;
+  inset:22px;
+  border:2px dashed rgba(5,6,7,.18);
+  border-radius:18px;
+}
+.gallery-photo-placeholder span{
+  position:relative;
+  z-index:1;
+  padding:10px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,.86);
+  border:1px solid rgba(5,6,7,.12);
+  color:var(--soft-ink);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.76rem;
+}
+.before-after-placeholder-card h3,
+.before-after-placeholder-card p{
+  padding:0 24px;
+}
+.before-after-placeholder-card h3{
+  margin:24px 0 8px;
+  font-size:clamp(1.45rem,2vw,2rem);
+}
+.before-after-placeholder-card p{
+  margin:0 0 26px;
+  color:var(--soft-ink);
+  font-weight:700;
+}
+
+@media (max-width:900px){
+  .home-slideshow{
+    min-height:clamp(360px,75vw,560px);
+  }
+  .home-slideshow-overlay{
+    inset:auto 18px 24px 18px;
+    width:auto;
+    max-width:390px;
+  }
+  .service-preview-grid{
+    grid-template-columns:1fr;
+  }
+}
+@media (max-width:560px){
+  .home-slideshow{
+    min-height:440px;
+  }
+  .home-slideshow-overlay{
+    padding:16px;
+  }
+  .home-slideshow-overlay h2{
+    font-size:1.45rem;
+  }
+  .home-slideshow-overlay p:not(.eyebrow){
+    font-size:.88rem;
+  }
+  .service-preview-image,
+  .gallery-photo-placeholder{
+    min-height:230px;
+  }
+}

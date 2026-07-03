@@ -34,19 +34,7 @@
   </header>
 
   <main>
-    <section class="home-slideshow" id="home" aria-label="MS Removal family-owned and operated slideshow">
-      <div class="home-slide home-slide-placeholder home-slide-placeholder-1" aria-hidden="true"></div>
-      <div class="home-slide home-slide-placeholder home-slide-placeholder-2" aria-hidden="true"></div>
-      <div class="home-slide home-slide-placeholder home-slide-placeholder-3" aria-hidden="true"></div>
-      <div class="home-slide home-slide-placeholder home-slide-placeholder-4" aria-hidden="true"></div>
-      <div class="home-slideshow-overlay">
-        <p class="eyebrow">Family-owned and operated</p>
-        <h1>Serving Southeast Wisconsin with Hard Work and Pride</h1>
-        <p>Cleanup, hauling, and outdoor services from a local family business built on sacrifice, trust, and showing up for every job.</p>
-      </div>
-    </section>
-
-    <section class="hero hero-home intro-hero">
+    <section class="hero hero-home intro-hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Family-owned hauling, cleanup and outdoor services</p>
@@ -63,6 +51,18 @@
       </div>
     </section>
 
+    <section class="home-slideshow" aria-label="MS Removal family-owned and operated slideshow">
+      <div class="home-slide home-slide-placeholder home-slide-placeholder-1" aria-hidden="true"></div>
+      <div class="home-slide home-slide-placeholder home-slide-placeholder-2" aria-hidden="true"></div>
+      <div class="home-slide home-slide-placeholder home-slide-placeholder-3" aria-hidden="true"></div>
+      <div class="home-slide home-slide-placeholder home-slide-placeholder-4" aria-hidden="true"></div>
+      <div class="home-slideshow-overlay">
+        <p class="eyebrow">Family-owned and operated</p>
+        <h2>Serving Southeast Wisconsin with Hard Work and Pride</h2>
+        <p>Local cleanup, hauling, and outdoor services from a family business built on trust and showing up.</p>
+      </div>
+    </section>
+
     <section class="section" id="services">
       <div class="container">
         <div class="section-heading">
@@ -71,33 +71,30 @@
           <p>Choose the service that fits the job. Our main cleanup services have their own quote pages, while outdoor services can be requested through the contact form.</p>
         </div>
 
-        <div class="cards three-cards service-card-row">
-          <a class="card card-orange service-image-card service-image-construction" href="construction-debris.html">
-            <span class="service-image-overlay" aria-hidden="true"></span>
-            <span class="service-image-content">
-              <span class="service-kicker">Cleanup Service</span>
+        <div class="service-preview-grid">
+          <a class="service-preview-card" href="construction-debris.html">
+            <div class="service-preview-image service-preview-construction" role="img" aria-label="Construction debris cleanup"></div>
+            <div class="service-preview-body">
               <h3>Construction Debris & Concrete</h3>
               <p>Cleanup for broken concrete, scrap materials, remodel debris, wood, drywall, tile, flooring, and job site mess.</p>
               <span class="card-cta">Construction Debris Page</span>
-            </span>
+            </div>
           </a>
-          <a class="card card-orange service-image-card service-image-yard" href="tree-brush-removal.html">
-            <span class="service-image-overlay" aria-hidden="true"></span>
-            <span class="service-image-content">
-              <span class="service-kicker">Outdoor Cleanup</span>
+          <a class="service-preview-card" href="tree-brush-removal.html">
+            <div class="service-preview-image service-preview-yard" role="img" aria-label="Tree, brush, and outdoor cleanup"></div>
+            <div class="service-preview-body">
               <h3>Tree, Brush & Material Hauling</h3>
               <p>Outdoor debris removal, brush piles, branches, landscape waste, and delivery of gravel, dirt, stone, and materials.</p>
               <span class="card-cta">Outdoor Cleanup Page</span>
-            </span>
+            </div>
           </a>
-          <a class="card card-orange service-image-card service-image-property" href="property-cleanouts.html">
-            <span class="service-image-overlay" aria-hidden="true"></span>
-            <span class="service-image-content">
-              <span class="service-kicker">Cleanout Service</span>
+          <a class="service-preview-card" href="property-cleanouts.html">
+            <div class="service-preview-image service-preview-property" role="img" aria-label="Property cleanout cleanup"></div>
+            <div class="service-preview-body">
               <h3>Property Cleanouts</h3>
               <p>Cleanouts for landlords, property managers, homeowners, rental turnovers, garages, basements, and move-outs.</p>
               <span class="card-cta">Cleanout Page</span>
-            </span>
+            </div>
           </a>
         </div>
 
@@ -177,19 +174,19 @@
           <h2>Before and After Project Photos</h2>
           <p>Use this section for real job photos as they come in. The placeholders below are ready for construction debris, outdoor cleanup, property cleanouts, and before-and-after job photos.</p>
         </div>
-        <div class="gallery-grid scene-gallery-grid">
-          <article class="gallery-card scene-gallery-card">
-            <div class="gallery-scene gallery-scene-construction" role="img" aria-label="Construction debris cleanup image"></div>
+        <div class="gallery-grid before-after-placeholder-grid">
+          <article class="gallery-card before-after-placeholder-card">
+            <div class="gallery-photo-placeholder" role="img" aria-label="Before and after photo placeholder"><span>Photo Placeholder</span></div>
             <h3>Construction Debris</h3>
             <p>Concrete, remodel debris, and job site cleanup photos.</p>
           </article>
-          <article class="gallery-card scene-gallery-card">
-            <div class="gallery-scene gallery-scene-yard" role="img" aria-label="Outdoor cleanup image"></div>
+          <article class="gallery-card before-after-placeholder-card">
+            <div class="gallery-photo-placeholder" role="img" aria-label="Before and after photo placeholder"><span>Photo Placeholder</span></div>
             <h3>Outdoor Cleanup</h3>
             <p>Brush removal, yard waste, lawn care, power washing, and snow work.</p>
           </article>
-          <article class="gallery-card scene-gallery-card">
-            <div class="gallery-scene gallery-scene-property" role="img" aria-label="Property cleanout image"></div>
+          <article class="gallery-card before-after-placeholder-card">
+            <div class="gallery-photo-placeholder" role="img" aria-label="Before and after photo placeholder"><span>Photo Placeholder</span></div>
             <h3>Property Cleanouts</h3>
             <p>Garages, basements, rentals, move-outs, and full property cleanups.</p>
           </article>
