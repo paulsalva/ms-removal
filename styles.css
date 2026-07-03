@@ -1201,5 +1201,56 @@ section[id],
     padding:20px;
   }
 }
+.reviews-footer{
+  text-align:center;
+  margin-top:56px;
+  padding-top:40px;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.reviews-footer p{
+  color:#dce3e5;
+  font-weight:600;
+  font-size:1rem;
+  margin:0 0 20px;
+}
+.review-platform-links{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.platform-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;
+  height:48px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  transition:all .3s ease;
+}
+.platform-link:hover{
+  background:rgba(229,154,57,.25);
+  border-color:rgba(229,154,57,.4);
+  transform:translateY(-2px);
+}
+.platform-link img{
+  width:24px;
+  height:24px;
+  filter:brightness(0) invert(1);
+}
+@media (max-width:700px){
+  .reviews-footer{
+    margin-top:40px;
+    padding-top:30px;
+  }
+  .reviews-footer p{
+    font-size:.95rem;
+  }
+  .review-platform-links{
+    gap:16px;
+  }
+}
 
 
