@@ -63,7 +63,7 @@
       <div class="home-slide home-slide-family home-slide-family-2" aria-hidden="true"></div>
       <div class="home-slide home-slide-family home-slide-family-3" aria-hidden="true"></div>
       <div class="home-slideshow-overlay">
-        <p class="eyebrow">Family-owned and operated</p>
+        <p class="eyebrow slideshow-eyebrow">Family-owned and operated</p>
         <h2>Serving Southeast Wisconsin with Hard Work and Pride</h2>
         <p>Local cleanup, hauling, and outdoor services from a family business built on trust and showing up.</p>
       </div>
@@ -112,34 +112,17 @@
           </div>
           <div class="seasonal-icon-grid">
             <article class="seasonal-icon-item">
-              <div class="seasonal-icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M32 4v16M32 40v16M8 32h16M40 32h16M12 12l11 11M41 41l11 11M52 12l-11 11M23 41l-11 11"/>
-                  <circle cx="32" cy="32" r="8"/>
-                </svg>
-              </div>
+              <div class="seasonal-icon">❄️</div>
               <h3>Snow Removal</h3>
               <p>Driveway, walkway, and property snow clearing help when winter weather gets in the way.</p>
             </article>
             <article class="seasonal-icon-item">
-              <div class="seasonal-icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M32 8c8 0 14 6 14 14 0 8-14 24-14 24S18 30 18 22c0-8 6-14 14-14Z"/>
-                  <circle cx="32" cy="22" r="3"/>
-                  <path d="M10 56h44M15 50c2-8 4-14 8-20M39 50c-2-8-4-14-8-20M27 50c0-6 2-12 5-18"/>
-                </svg>
-              </div>
+              <div class="seasonal-icon">🌱</div>
               <h3>Lawn Care</h3>
               <p>Mowing, trimming, and basic lawn maintenance to keep your property clean and cared for.</p>
             </article>
             <article class="seasonal-icon-item">
-              <div class="seasonal-icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 48h24c2 0 4-2 4-4V20c0-2-2-4-4-4h-24c-2 0-4 2-4 4v24c0 2 2 4 4 4Z"/>
-                  <path d="M28 20v-8M36 20v-8M32 32v12M24 32c0 4 3 7 8 7s8-3 8-7"/>
-                  <path d="M16 50h32"/>
-                </svg>
-              </div>
+              <div class="seasonal-icon">💧</div>
               <h3>Power Washing</h3>
               <p>Exterior cleaning for driveways, walkways, patios, siding, and surfaces that need a fresh reset.</p>
             </article>
@@ -163,50 +146,12 @@
       <div class="container service-area-container">
         <div class="service-area-header">
           <p class="eyebrow">Service area</p>
-          <h2>Serving Racine, Wisconsin & 30 Miles Beyond</h2>
-          <p>MS Removal is locally owned and operated in Racine County, serving homeowners, contractors, landlords, and property owners with dependable cleanup, hauling, and outdoor services.</p>
+          <h2>Serving Racine County and Southeast Wisconsin</h2>
+          <p>We service Racine County and all of southeastern Wisconsin, including Kenosha, Somers, Mt. Pleasant, and surrounding areas.</p>
         </div>
 
-        <div class="service-area-grid">
-          <div class="service-area-card map-card">
-            <div id="service-map" class="service-map"></div>
-          </div>
-
-          <div class="service-area-card cities-card">
-            <div class="cities-content">
-              <h3>Service Area</h3>
-              <div class="cities-list">
-                <div class="city-badge">Racine</div>
-                <div class="city-badge">Kenosha</div>
-                <div class="city-badge">Somers</div>
-                <div class="city-badge">Mt. Pleasant</div>
-                <div class="city-divider">Racine &amp; Kenosha Counties</div>
-              </div>
-              <p class="cities-note">Plus all surrounding areas within a 30-mile radius</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-area-footer">
-          <div class="zip-checker-card service-area-card">
-            <div class="zip-content">
-              <h3>Check Your ZIP Code</h3>
-              <p>Enter your ZIP code to see if we service your area.</p>
-              <div class="zip-input-group">
-                <input type="text" id="zip-input" class="zip-input" placeholder="Enter 5-digit ZIP code" maxlength="5" inputmode="numeric">
-                <button type="button" id="zip-check-btn" class="btn zip-check-btn">Check</button>
-              </div>
-              <div id="zip-result" class="zip-result hidden"></div>
-            </div>
-          </div>
-
-          <div class="cta-card service-area-card">
-            <div class="cta-content">
-              <h3>Not Sure If We Service You?</h3>
-              <p>Don't hesitate—reach out and ask. We&apos;ll let you know if we can help.</p>
-              <a href="tel:+12623415580" class="btn cta-phone-btn">Call or Text (262) 341-5580</a>
-            </div>
-          </div>
+        <div class="service-area-map-container">
+          <div id="service-map" class="service-map"></div>
         </div>
       </div>
     </section>
@@ -396,96 +341,16 @@
       });
     })();
 
-    // Service area map and ZIP code checker
+    // Service area map - simple display
     (function () {
-      // Racine, WI coordinates
       var racineCoords = [42.7263, -87.7848];
-      var radiusMiles = 30;
-      var radiusKm = radiusMiles * 1.60934;
-
-      // Service area ZIP codes (Racine and Kenosha counties + surrounding)
-      var serviceZips = [
-        '53402', '53403', '53404', '53405', '53406', '53407', '53408', '53409', '53410', '53411',
-        '53412', '53440', '53441', '53442', '53443', '53444', '53446', '53447', '53449', '53456',
-        '53457', '53462', '53464', '53467', '53481', '53483', '53486', '53487', '53488', '53489',
-        '53490', '53494', '53511', '53517', '53518', '53520', '53540', '53542', '53543', '53545',
-        '53546', '53548', '53549', '53551', '53552', '53553', '53555', '53557', '53558', '53560',
-        '53562', '53563', '53565', '53566', '53568', '53569', '53570', '53571', '53573', '53574',
-        '53575', '53576', '53578', '53579', '53581', '53584', '53586'
-      ];
-
-      // Initialize map
       var mapElement = document.getElementById('service-map');
       if (mapElement && window.L) {
-        var map = L.map('service-map').setView(racineCoords, 11);
+        var map = L.map('service-map').setView(racineCoords, 9);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© OpenStreetMap contributors',
           maxZoom: 19
         }).addTo(map);
-
-        // Add circle for 30-mile radius
-        L.circle(racineCoords, radiusKm * 1000, {
-          color: '#e59a39',
-          fillColor: '#e59a39',
-          fillOpacity: 0.15,
-          weight: 2
-        }).addTo(map);
-
-        // Add marker for Racine
-        L.circleMarker(racineCoords, {
-          radius: 8,
-          fillColor: '#e59a39',
-          color: '#081003',
-          weight: 3,
-          opacity: 1,
-          fillOpacity: 0.8
-        }).addTo(map);
-
-        // Add labels for key cities
-        var cities = [
-          {name: 'Racine', coords: [42.7263, -87.7848]},
-          {name: 'Kenosha', coords: [42.5864, -87.8206]},
-          {name: 'Somers', coords: [42.6628, -87.8606]},
-          {name: 'Mt. Pleasant', coords: [42.8463, -87.9206]}
-        ];
-
-        cities.forEach(function(city) {
-          L.marker(city.coords, {
-            title: city.name
-          }).bindPopup(city.name).addTo(map);
-        });
-      }
-
-      // ZIP code checker
-      var zipInput = document.getElementById('zip-input');
-      var zipCheckBtn = document.getElementById('zip-check-btn');
-      var zipResult = document.getElementById('zip-result');
-
-      if (zipCheckBtn) {
-        zipCheckBtn.addEventListener('click', function() {
-          var zip = zipInput.value.trim();
-          if (zip.length !== 5 || !/^\d+$/.test(zip)) {
-            zipResult.textContent = 'Please enter a valid 5-digit ZIP code.';
-            zipResult.className = 'zip-result error';
-            return;
-          }
-
-          var inServiceArea = serviceZips.includes(zip);
-          if (inServiceArea) {
-            zipResult.innerHTML = '<strong>Great news!</strong> We service your area. <a href="#contact">Get a free quote →</a>';
-            zipResult.className = 'zip-result success';
-          } else {
-            zipResult.textContent = 'This ZIP code is outside our service area. Call us—we may still be able to help!';
-            zipResult.className = 'zip-result notfound';
-          }
-        });
-
-        // Allow Enter key to submit
-        zipInput.addEventListener('keypress', function(e) {
-          if (e.key === 'Enter') {
-            zipCheckBtn.click();
-          }
-        });
       }
     })();
   </script>
