@@ -16,7 +16,7 @@
 <body>
   <header class="site-header home-header">
     <div class="container header-inner">
-      <a class="logo-link" href="index.html" aria-label="MS Removal home">
+      <a class="logo-link" href="/" aria-label="MS Removal home">
         <img src="images/ms-removal-text-logo.png" alt="MS Removal" class="site-logo" />
       </a>
       <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
@@ -78,30 +78,38 @@
         </div>
 
         <div class="service-preview-grid">
-          <a class="service-preview-card" href="construction-debris.html">
-            <div class="service-preview-image service-preview-construction" role="img" aria-label="Construction debris cleanup"></div>
-            <div class="service-preview-body">
-              <h3>Construction Debris & Concrete</h3>
-              <p>Cleanup for broken concrete, scrap materials, remodel debris, wood, drywall, tile, flooring, and job site mess.</p>
-              <span class="card-cta">Construction Debris Page</span>
-            </div>
-          </a>
-          <a class="service-preview-card" href="tree-brush-removal.html">
-            <div class="service-preview-image service-preview-yard" role="img" aria-label="Tree, brush, and outdoor cleanup"></div>
-            <div class="service-preview-body">
-              <h3>Tree, Brush & Material Hauling</h3>
-              <p>Outdoor debris removal, brush piles, branches, landscape waste, and delivery of gravel, dirt, stone, and materials.</p>
-              <span class="card-cta">Outdoor Cleanup Page</span>
-            </div>
-          </a>
-          <a class="service-preview-card" href="property-cleanouts.html">
+          <div class="service-preview-card">
             <div class="service-preview-image service-preview-property" role="img" aria-label="Property cleanout cleanup"></div>
             <div class="service-preview-body">
               <h3>Property Cleanouts</h3>
               <p>Cleanouts for landlords, property managers, homeowners, rental turnovers, garages, basements, and move-outs.</p>
-              <span class="card-cta">Cleanout Page</span>
+              <span class="card-cta">Property Cleanouts</span>
             </div>
-          </a>
+          </div>
+          <div class="service-preview-card">
+            <div class="service-preview-image service-preview-construction" role="img" aria-label="Junk removal cleanup"></div>
+            <div class="service-preview-body">
+              <h3>Junk Removal</h3>
+              <p>Removal and disposal of unwanted items, appliances, furniture, scrap materials, and general household junk.</p>
+              <span class="card-cta">Junk Removal</span>
+            </div>
+          </div>
+          <div class="service-preview-card">
+            <div class="service-preview-image service-preview-yard" role="img" aria-label="Yard waste cleanup"></div>
+            <div class="service-preview-body">
+              <h3>Yard Waste</h3>
+              <p>Brush removal, yard debris, branches, leaves, tree trimming waste, and landscape material hauling.</p>
+              <span class="card-cta">Yard Waste</span>
+            </div>
+          </div>
+          <div class="service-preview-card">
+            <div class="service-preview-image service-preview-materials" role="img" aria-label="Material delivery and trailer rentals"></div>
+            <div class="service-preview-body">
+              <h3>Material Delivery & Trailer Rentals</h3>
+              <p>Delivery of gravel, dirt, stone, mulch, and sand. Also rent trailers for your cleanup and hauling projects.</p>
+              <span class="card-cta">Material Delivery & Trailer Rentals</span>
+            </div>
+          </div>
         </div>
 
         <div class="service-subsection">
@@ -137,7 +145,7 @@
           <p class="eyebrow">Hablamos Español</p>
           <h2>Bienvenidos a MS Removal</h2>
           <p>Somos un negocio familiar y estamos aquí para ayudarle con limpieza, remoción de escombros, mantenimiento exterior, retiro de nieve, cuidado de césped y lavado a presión. Llámenos o mándenos un mensaje para una cotización gratis.</p>
-          <a class="btn" href="#contact">Solicite una cotización</a>
+          <button class="btn" id="spanish-quote-trigger" aria-label="Open Spanish contact form">Solicite una cotización</button>
         </div>
       </div>
     </section>
@@ -146,8 +154,8 @@
       <div class="container service-area-container">
         <div class="service-area-header">
           <p class="eyebrow">Service area</p>
-          <h2>Serving Racine County and Southeast Wisconsin</h2>
-          <p>We service Racine County and all of southeastern Wisconsin, including Kenosha, Somers, Mt. Pleasant, and surrounding areas.</p>
+          <h2>Serving Racine, Kenosha and Milwaukee</h2>
+          <p>Plus surrounding counties, towns and suburbs all over southeastern Wisconsin</p>
         </div>
 
         <div class="service-area-map-container">
@@ -235,39 +243,50 @@
           <p>See examples from each cleanup category. Tap any project type to view more details and request the right quote.</p>
         </div>
         <div class="gallery-grid home-before-after-grid">
-          <a class="gallery-card home-ba-card" href="construction-debris.html" aria-label="View construction debris before and after photos">
+          <button class="gallery-card home-ba-card" data-lightbox="outside-house" aria-label="View outside house before and after photos">
             <div class="home-ba-pair">
-              <figure class="home-ba-item"><span class="home-ba-tag">Before</span><img src="images/ba-construction-1-before.png" alt="Construction debris before removal" loading="lazy"></figure>
-              <figure class="home-ba-item"><span class="home-ba-tag is-after">After</span><img src="images/ba-construction-1-after.png" alt="Construction debris after removal" loading="lazy"></figure>
+              <figure class="home-ba-item"><span class="home-ba-tag">Before</span><img src="images/outside-house-before.webp" alt="Outside house before cleanup" loading="lazy"></figure>
+              <figure class="home-ba-item"><span class="home-ba-tag is-after">After</span><img src="images/outside-house-after.webp" alt="Outside house after cleanup" loading="lazy"></figure>
             </div>
             <div class="home-ba-body">
-              <h3>Construction Debris</h3>
-              <p>Concrete, remodel debris, and job site cleanup photos.</p>
-              <span class="card-cta">View Construction Debris</span>
+              <h3>Outside House</h3>
+              <p>Exterior property cleanup, yard clearing, and outdoor space restoration.</p>
+              <span class="card-cta">View Photos</span>
             </div>
-          </a>
-          <a class="gallery-card home-ba-card" href="tree-brush-removal.html" aria-label="View outdoor cleanup before and after photos">
+          </button>
+          <button class="gallery-card home-ba-card" data-lightbox="garage" aria-label="View garage before and after photos">
             <div class="home-ba-pair">
-              <figure class="home-ba-item"><span class="home-ba-tag">Before</span><img src="images/ba-yard-1-before.png" alt="Outdoor brush pile before removal" loading="lazy"></figure>
-              <figure class="home-ba-item"><span class="home-ba-tag is-after">After</span><img src="images/ba-yard-1-after.png" alt="Outdoor space after brush removal" loading="lazy"></figure>
+              <figure class="home-ba-item"><span class="home-ba-tag">Before</span><img src="images/garage-before.webp" alt="Garage before cleanup" loading="lazy"></figure>
+              <figure class="home-ba-item"><span class="home-ba-tag is-after">After</span><img src="images/garage-after.webp" alt="Garage after cleanup" loading="lazy"></figure>
             </div>
             <div class="home-ba-body">
-              <h3>Outdoor Cleanup</h3>
-              <p>Brush removal, yard waste, lawn care, power washing, and snow work.</p>
-              <span class="card-cta">View Outdoor Cleanup</span>
+              <h3>Garage</h3>
+              <p>Garage cleanout, organization, and junk removal services.</p>
+              <span class="card-cta">View Photos</span>
             </div>
-          </a>
-          <a class="gallery-card home-ba-card" href="property-cleanouts.html" aria-label="View property cleanout before and after photos">
+          </button>
+          <button class="gallery-card home-ba-card" data-lightbox="hot-tub" aria-label="View hot tub area before and after photos">
             <div class="home-ba-pair">
-              <figure class="home-ba-item"><span class="home-ba-tag">Before</span><img src="images/ba-cleanout-1-before.png" alt="Property cleanout before removal" loading="lazy"></figure>
-              <figure class="home-ba-item"><span class="home-ba-tag is-after">After</span><img src="images/ba-cleanout-1-after.png" alt="Property cleanout after removal" loading="lazy"></figure>
+              <figure class="home-ba-item"><span class="home-ba-tag">Before</span><img src="images/hot-tub-before.webp" alt="Hot tub area before cleanup" loading="lazy"></figure>
+              <figure class="home-ba-item"><span class="home-ba-tag is-after">After</span><img src="images/hot-tub-after.webp" alt="Hot tub area after cleanup" loading="lazy"></figure>
             </div>
             <div class="home-ba-body">
-              <h3>Property Cleanouts</h3>
-              <p>Garages, basements, rentals, move-outs, and full property cleanups.</p>
-              <span class="card-cta">View Property Cleanouts</span>
+              <h3>Hot Tub Area</h3>
+              <p>Backyard cleanup, hot tub area restoration, and outdoor space transformation.</p>
+              <span class="card-cta">View Photos</span>
             </div>
-          </a>
+          </button>
+          <button class="gallery-card home-ba-card" data-lightbox="yard" aria-label="View yard before and after photos">
+            <div class="home-ba-pair">
+              <figure class="home-ba-item"><span class="home-ba-tag">Before</span><img src="images/yard-before-1.webp" alt="Yard before cleanup" loading="lazy"></figure>
+              <figure class="home-ba-item"><span class="home-ba-tag is-after">After</span><img src="images/yard-after-1.webp" alt="Yard after cleanup" loading="lazy"></figure>
+            </div>
+            <div class="home-ba-body">
+              <h3>Yard Cleanup</h3>
+              <p>Brush removal, yard waste clearing, and landscape debris handling.</p>
+              <span class="card-cta">View Photos</span>
+            </div>
+          </button>
         </div>
       </div>
     </section>
@@ -296,7 +315,7 @@
           <div class="who-copy">
             <p class="eyebrow">Who we are</p>
             <h2>Built on Family, Work Ethic and Sacrifice</h2>
-            <p>MS Removal is led by a first-generation entrepreneur who brought family and friends into the business because this was never meant to be just a job. It was built from the example of an immigrant father who woke up early no matter the situation, worked through hardship, and risked everything to provide for his family.</p>
+            <p>MS Removal is led by a first-generation entrepreneur who brought family and friends into the business because this was never meant to be just a job. It was built from the example of a father who woke up early no matter the situation, worked through hardship, and risked everything to provide for his family.</p>
             <p>That history is the owner&apos;s why: to repay that sacrifice, create opportunity for the people closest to him, and one day help give his father the chance to live his own dream. Every job is handled with pride, respect, and the same work ethic that started it all.</p>
           </div>
         </div>
@@ -320,13 +339,46 @@
         </form>
       </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close lightbox">
+          <span></span>
+          <span></span>
+        </button>
+        <img id="lightbox-image" src="" alt="" class="lightbox-image">
+      </div>
+    </div>
+
+    <!-- Spanish Contact Modal -->
+    <div id="spanish-contact-modal" class="spanish-contact-modal">
+      <div class="spanish-contact-overlay"></div>
+      <div class="spanish-contact-content">
+        <button class="spanish-contact-close" aria-label="Close Spanish contact form">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="quote-intro">
+          <h2>¿Necesita algo que se lleve, limpie o mantenga?</h2>
+          <p>Cuéntenos cómo podemos ayudarle y nos comunicaremos rápidamente con una cotización.</p>
+        </div>
+        <form class="quote-form" action="mailto:info@example.com" method="post" enctype="text/plain">
+          <label>Nombre<input type="text" name="name" placeholder="Su nombre" required></label>
+          <label>Teléfono<input type="tel" name="phone" placeholder="Su número" required></label>
+          <label>¿Cómo podemos ayudarle?<textarea name="details" rows="2" placeholder="Detalles del trabajo"></textarea></label>
+          <button class="btn" type="submit">Solicitar Cotización</button>
+        </form>
+        <p class="spanish-contact-phone">¿Prefiere llamar? <a href="tel:+12623415580">(262) 341-5580</a></p>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <img src="images/ms-removal-logo.png" alt="MS Removal" />
       <div class="footer-about">
-        <p class="footer-tag">Junk Removal Made Easy &mdash; Fast &bull; Affordable &bull; Eco-Friendly</p>
+        <p class="footer-tag">Less Mess. Less Stress.</p>
         <p>Racine, WI &amp; Surrounding Areas</p>
         <p>Call / Text <a href="tel:+12623415580">(262) 341-5580</a></p>
       </div>
@@ -334,6 +386,9 @@
         <a href="https://www.facebook.com/profile.php?id=61579258533454" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/msremoval/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.yelp.com/biz/ms-removal-racine" target="_blank" rel="noopener">Yelp</a>
+      </div>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
   </footer>
@@ -370,6 +425,123 @@
           maxZoom: 19
         }).addTo(map);
       }
+    })();
+
+    // Lightbox functionality
+    (function () {
+      var lightboxData = {
+        'outside-house': {
+          before: 'images/outside-house-before.webp',
+          after: 'images/outside-house-after.webp'
+        },
+        'garage': {
+          before: 'images/garage-before.webp',
+          after: 'images/garage-after.webp'
+        },
+        'hot-tub': {
+          before: 'images/hot-tub-before.webp',
+          after: 'images/hot-tub-after.webp'
+        },
+        'yard': {
+          before: 'images/yard-before-1.webp',
+          after: 'images/yard-after-1.webp'
+        }
+      };
+
+      var currentLightbox = null;
+      var currentImageType = 'before';
+      var modal = document.getElementById('lightbox-modal');
+      var lightboxImage = document.getElementById('lightbox-image');
+      var closeBtn = document.querySelector('.lightbox-close');
+      var galleryCards = document.querySelectorAll('[data-lightbox]');
+
+      function openLightbox(galleryType, imageType) {
+        currentLightbox = galleryType;
+        currentImageType = imageType || 'before';
+        var imageUrl = lightboxData[galleryType][currentImageType];
+        lightboxImage.src = imageUrl;
+        lightboxImage.alt = galleryType + ' ' + currentImageType;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        currentLightbox = null;
+      }
+
+      function toggleImage() {
+        if (!currentLightbox) return;
+        currentImageType = currentImageType === 'before' ? 'after' : 'before';
+        var imageUrl = lightboxData[currentLightbox][currentImageType];
+        lightboxImage.src = imageUrl;
+        lightboxImage.alt = currentLightbox + ' ' + currentImageType;
+      }
+
+      // Event listeners for gallery cards
+      galleryCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          var galleryType = this.getAttribute('data-lightbox');
+          openLightbox(galleryType, 'before');
+        });
+      });
+
+      // Close button
+      closeBtn.addEventListener('click', closeLightbox);
+
+      // Modal background click
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          closeLightbox();
+        }
+      });
+
+      // Image click to toggle before/after
+      lightboxImage.addEventListener('click', toggleImage);
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function (e) {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === ' ') {
+          e.preventDefault();
+          toggleImage();
+        }
+      });
+    })();
+
+    // Spanish Contact Modal functionality
+    (function () {
+      var spanishModal = document.getElementById('spanish-contact-modal');
+      var spanishTrigger = document.getElementById('spanish-quote-trigger');
+      var spanishCloseBtn = document.querySelector('.spanish-contact-close');
+      var spanishOverlay = document.querySelector('.spanish-contact-overlay');
+
+      function openSpanishModal() {
+        spanishModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeSpanishModal() {
+        spanishModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      // Open button
+      spanishTrigger.addEventListener('click', openSpanishModal);
+
+      // Close button
+      spanishCloseBtn.addEventListener('click', closeSpanishModal);
+
+      // Overlay click
+      spanishOverlay.addEventListener('click', closeSpanishModal);
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function (e) {
+        if (!spanishModal.classList.contains('active')) return;
+        if (e.key === 'Escape') closeSpanishModal();
+      });
     })();
   </script>
 </body>
