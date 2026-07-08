@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" href="fonts/Anton-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="icon" href="images/ms-removal-icon.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -62,7 +63,7 @@
       <div class="home-slide home-slide-family home-slide-family-2" aria-hidden="true"></div>
       <div class="home-slide home-slide-family home-slide-family-3" aria-hidden="true"></div>
       <div class="home-slideshow-overlay">
-        <p class="eyebrow">Family-owned and operated</p>
+        <p class="eyebrow slideshow-eyebrow">Family-owned and operated</p>
         <h2>Serving Southeast Wisconsin with Hard Work and Pride</h2>
         <p>Local cleanup, hauling, and outdoor services from a family business built on trust and showing up.</p>
       </div>
@@ -111,23 +112,17 @@
           </div>
           <div class="seasonal-icon-grid">
             <article class="seasonal-icon-item">
-              <div class="seasonal-icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64" focusable="false"><path d="M32 9v46M16 17l32 30M48 17 16 47M11 32h42M22 13l10 10 10-10M22 51l10-10 10 10M13 22l14 1-1-14M51 42l-14-1 1 14M51 22l-14 1 1-14M13 42l14-1-1 14"/></svg>
-              </div>
+              <div class="seasonal-icon">❄️</div>
               <h3>Snow Removal</h3>
               <p>Driveway, walkway, and property snow clearing help when winter weather gets in the way.</p>
             </article>
             <article class="seasonal-icon-item">
-              <div class="seasonal-icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64" focusable="false"><path d="M10 52h44M18 52c1-11 4-21 11-31 2 12 1 22-1 31M34 52c2-12 7-24 16-34 1 14-2 25-7 34M23 52c-4-10-5-20-2-32 7 9 10 19 10 32"/></svg>
-              </div>
+              <div class="seasonal-icon">🌱</div>
               <h3>Lawn Care</h3>
               <p>Mowing, trimming, and basic lawn maintenance to keep your property clean and cared for.</p>
             </article>
             <article class="seasonal-icon-item">
-              <div class="seasonal-icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64" focusable="false"><path d="M15 47l16-16 6 6-16 16-6-6ZM35 27l7-7 8 8-7 7M42 20l5-5 8 8-5 5M9 25c7-7 14-11 23-13M8 36c8-3 16-5 25-4M30 9c-4 8-6 16-6 25"/></svg>
-              </div>
+              <div class="seasonal-icon">💧</div>
               <h3>Power Washing</h3>
               <p>Exterior cleaning for driveways, walkways, patios, siding, and surfaces that need a fresh reset.</p>
             </article>
@@ -147,12 +142,88 @@
       </div>
     </section>
 
-    <section class="local-banner" id="service-area">
-      <div class="container">
-        <p class="eyebrow">Service area</p>
-        <h2>Southeastern Wisconsin, Through and Through</h2>
-        <p>MS Removal is locally owned and operated, serving homeowners, contractors, landlords, and property owners with dependable cleanup, hauling, and outdoor services.</p>
-        <p class="local-area">Servicing Racine County, Kenosha County &amp; surrounding areas</p>
+    <section class="service-area-section" id="service-area">
+      <div class="container service-area-container">
+        <div class="service-area-header">
+          <p class="eyebrow">Service area</p>
+          <h2>Serving Racine County and Southeast Wisconsin</h2>
+          <p>We service Racine County and all of southeastern Wisconsin, including Kenosha, Somers, Mt. Pleasant, and surrounding areas.</p>
+        </div>
+
+        <div class="service-area-map-container">
+          <div id="service-map" class="service-map"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section">
+      <div class="container reviews-container">
+        <div class="reviews-header">
+          <p class="eyebrow">Customer reviews</p>
+          <h2>What Our Customers Say</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header">
+              <strong class="review-name">Sarah M.</strong>
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </div>
+            <p class="review-text">"MS Removal was incredibly professional and efficient. They cleared out my garage in no time, and left everything spotless. I highly recommend them!"</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <strong class="review-name">John D.</strong>
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </div>
+            <p class="review-text">"Great service, great price, and they actually showed up when they said they would. It's refreshing to work with a reliable local business."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <strong class="review-name">Maria T.</strong>
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </div>
+            <p class="review-text">"The crew was friendly and hard-working. They handled my property cleanout with care and professionalism. Will definitely call them again!"</p>
+          </div>
+        </div>
+
+        <div class="reviews-footer">
+          <p>Follow us and read more reviews:</p>
+          <div class="review-platform-links">
+            <a href="https://share.google/eoDywOuELP7kgxUTL" target="_blank" rel="noopener" class="platform-link" aria-label="Google Reviews">
+              <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/google/default.svg" alt="Google Reviews" width="24" height="24" />
+            </a>
+            <a href="https://www.yelp.com/biz/ms-removal-racine" target="_blank" rel="noopener" class="platform-link" aria-label="Yelp Reviews">
+              <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/yelp/default.svg" alt="Yelp Reviews" width="24" height="24" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61579258533454" target="_blank" rel="noopener" class="platform-link" aria-label="Facebook">
+              <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/facebook/default.svg" alt="Facebook" width="24" height="24" />
+            </a>
+            <a href="https://www.instagram.com/msremoval/" target="_blank" rel="noopener" class="platform-link" aria-label="Instagram">
+              <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/instagram/default.svg" alt="Instagram" width="24" height="24" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -267,6 +338,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     (function () {
       var header = document.querySelector('.site-header');
@@ -285,6 +357,19 @@
           toggle.setAttribute('aria-expanded', 'false');
         });
       });
+    })();
+
+    // Service area map - simple display
+    (function () {
+      var racineCoords = [42.7263, -87.7848];
+      var mapElement = document.getElementById('service-map');
+      if (mapElement && window.L) {
+        var map = L.map('service-map').setView(racineCoords, 9);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap contributors',
+          maxZoom: 19
+        }).addTo(map);
+      }
     })();
   </script>
 </body>
