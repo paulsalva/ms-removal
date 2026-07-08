@@ -145,7 +145,7 @@
           <p class="eyebrow">Hablamos Español</p>
           <h2>Bienvenidos a MS Removal</h2>
           <p>Somos un negocio familiar y estamos aquí para ayudarle con limpieza, remoción de escombros, mantenimiento exterior, retiro de nieve, cuidado de césped y lavado a presión. Llámenos o mándenos un mensaje para una cotización gratis.</p>
-          <a class="btn" href="#contact">Solicite una cotización</a>
+          <button class="btn" id="spanish-quote-trigger" aria-label="Open Spanish contact form">Solicite una cotización</button>
         </div>
       </div>
     </section>
@@ -350,6 +350,29 @@
         <img id="lightbox-image" src="" alt="" class="lightbox-image">
       </div>
     </div>
+
+    <!-- Spanish Contact Modal -->
+    <div id="spanish-contact-modal" class="spanish-contact-modal">
+      <div class="spanish-contact-overlay"></div>
+      <div class="spanish-contact-content">
+        <button class="spanish-contact-close" aria-label="Close Spanish contact form">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="quote-intro">
+          <p class="eyebrow">Contacto</p>
+          <h2>¿Necesita algo que se lleve, limpie o mantenga?</h2>
+          <p>Cuéntenos su nombre, el mejor número para comunicarse con usted y cómo podemos ayudarle. Le daremos seguimiento rápidamente con una cotización clara.</p>
+          <p class="form-callout">¿Prefiere hablar directamente? Llame al <a href="tel:+12623415580">(262) 341-5580</a>.</p>
+        </div>
+        <form class="quote-form" action="mailto:info@example.com" method="post" enctype="text/plain">
+          <label>Nombre<input type="text" name="name" placeholder="Su nombre" required></label>
+          <label>Teléfono<input type="tel" name="phone" placeholder="Su número de teléfono" required></label>
+          <label>¿Cómo podemos ayudarle?<textarea name="details" rows="4" placeholder="Escombros de construcción, remoción de maleza, limpieza, remoción de nieve, cuidado del césped, limpieza a presión, u otro trabajo."></textarea></label>
+          <button class="btn" type="submit">Solicitar Cotización</button>
+        </form>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -483,6 +506,39 @@
           e.preventDefault();
           toggleImage();
         }
+      });
+    })();
+
+    // Spanish Contact Modal functionality
+    (function () {
+      var spanishModal = document.getElementById('spanish-contact-modal');
+      var spanishTrigger = document.getElementById('spanish-quote-trigger');
+      var spanishCloseBtn = document.querySelector('.spanish-contact-close');
+      var spanishOverlay = document.querySelector('.spanish-contact-overlay');
+
+      function openSpanishModal() {
+        spanishModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeSpanishModal() {
+        spanishModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      // Open button
+      spanishTrigger.addEventListener('click', openSpanishModal);
+
+      // Close button
+      spanishCloseBtn.addEventListener('click', closeSpanishModal);
+
+      // Overlay click
+      spanishOverlay.addEventListener('click', closeSpanishModal);
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function (e) {
+        if (!spanishModal.classList.contains('active')) return;
+        if (e.key === 'Escape') closeSpanishModal();
       });
     })();
   </script>
