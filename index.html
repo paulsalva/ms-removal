@@ -43,7 +43,7 @@
     <section class="hero hero-home intro-hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Family-owned hauling, cleanup and outdoor services</p>
+          <p class="eyebrow">Family-owned, Racine, WI</p>
           <h1>Less Mess. Less Stress.</h1>
           <p class="lead">MS Removal helps homeowners, contractors, landlords, and property owners clear out heavy debris, outdoor waste, unwanted items, and messy spaces without the hassle.</p>
           <div class="hero-buttons">
@@ -219,19 +219,19 @@
           <p>Follow us and read more reviews:</p>
           <div class="review-platform-links">
             <a href="https://share.google/eoDywOuELP7kgxUTL" target="_blank" rel="noopener" class="platform-link" aria-label="Google Reviews">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" font-weight="bold" fill="#000">G</text></svg>
+              <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/google/default.svg" width="24" height="24" alt="Google" />
             </a>
             <a href="https://www.yelp.com/biz/ms-removal-racine" target="_blank" rel="noopener" class="platform-link" aria-label="Yelp Reviews">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">★</text></svg>
+              <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/yelp/default.svg" width="24" height="24" alt="Yelp" />
             </a>
             <a href="https://www.facebook.com/profile.php?id=61579258533454" target="_blank" rel="noopener" class="platform-link" aria-label="Facebook">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/facebook/default.svg" width="24" height="24" alt="Facebook" />
             </a>
             <a href="https://www.instagram.com/msremoval/" target="_blank" rel="noopener" class="platform-link" aria-label="Instagram">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg"><rect x="2.17" y="2.17" width="19.66" height="19.66" rx="4.58" ry="4.58" fill="none" stroke="#000" stroke-width="1.5"/><circle cx="12" cy="12" r="4.29" fill="none" stroke="#000" stroke-width="1.5"/><circle cx="18.27" cy="5.73" r="1" fill="#000"/></svg>
+              <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/instagram/default.svg" width="24" height="24" alt="Instagram" />
             </a>
             <a href="https://www.youtube.com/@msremoval" target="_blank" rel="noopener" class="platform-link" aria-label="YouTube">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/youtube/default.svg" width="24" height="24" alt="YouTube" />
             </a>
           </div>
         </div>
@@ -388,11 +388,11 @@
       <div class="footer-social">
         <a href="https://www.facebook.com/profile.php?id=61579258533454" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/msremoval/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@msremoval" target="_blank" rel="noopener">YouTube</a>
         <a href="https://www.yelp.com/biz/ms-removal-racine" target="_blank" rel="noopener">Yelp</a>
+        <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
       </div>
-      <div class="footer-legal">
-        <a href="privacy.html">Privacy Policy</a>
-      </div>
+
     </div>
   </footer>
 
@@ -422,7 +422,14 @@
       var racineCoords = [42.7263, -87.7848];
       var mapElement = document.getElementById('service-map');
       if (mapElement && window.L) {
-        var map = L.map('service-map').setView(racineCoords, 9);
+        var map = L.map('service-map', {
+          zoom: 9,
+          scrollWheelZoom: false,
+          doubleClickZoom: false,
+          touchZoom: false,
+          zoomControl: false,
+          dragging: false
+        }).setView(racineCoords, 9);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© OpenStreetMap contributors',
           maxZoom: 19
