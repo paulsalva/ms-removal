@@ -422,7 +422,14 @@
       var racineCoords = [42.7263, -87.7848];
       var mapElement = document.getElementById('service-map');
       if (mapElement && window.L) {
-        var map = L.map('service-map').setView(racineCoords, 9);
+        var map = L.map('service-map', {
+          zoom: 9,
+          scrollWheelZoom: false,
+          doubleClickZoom: false,
+          touchZoom: false,
+          zoomControl: false,
+          dragging: false
+        }).setView(racineCoords, 9);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© OpenStreetMap contributors',
           maxZoom: 19
