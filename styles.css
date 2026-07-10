@@ -650,6 +650,12 @@ a.card:hover .card-cta{
   border:1px solid rgba(229,154,57,.28);
   font-size:46px;
   line-height:1;
+  flex-shrink:0;
+}
+.service-icon-img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 .seasonal-icon-item h3{
   font-size:clamp(1.85rem,2.8vw,3rem);
@@ -665,7 +671,9 @@ a.card:hover .card-cta{
 @media (max-width:900px){
   .service-image-card{min-height:380px}
   .seasonal-icon-grid{grid-template-columns:1fr;gap:34px}
-  .seasonal-icon-item{padding:0}
+  .seasonal-icon-item{padding:0;display:flex;align-items:flex-start;gap:16px}
+  .seasonal-icon{margin-bottom:0}
+  .seasonal-icon-item h3,.seasonal-icon-item p{margin-left:0}
 }
 
 /* Requested homepage refinements: intro first, small slideshow card, photo service cards, gallery placeholders */
