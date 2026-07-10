@@ -671,9 +671,11 @@ a.card:hover .card-cta{
 @media (max-width:900px){
   .service-image-card{min-height:380px}
   .seasonal-icon-grid{grid-template-columns:1fr;gap:34px}
-  .seasonal-icon-item{padding:0;display:flex;align-items:flex-start;gap:16px}
-  .seasonal-icon{margin-bottom:0}
+  .seasonal-icon-item{padding:0;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+  .seasonal-icon{margin-bottom:0;width:64px;height:64px}
   .seasonal-icon-item h3,.seasonal-icon-item p{margin-left:0}
+  .seasonal-icon-item h3{font-size:1.5rem}
+  .seasonal-icon-item p{font-size:0.875rem;font-weight:600}
 }
 
 /* Requested homepage refinements: intro first, small slideshow card, photo service cards, gallery placeholders */
