@@ -553,6 +553,58 @@
         if (e.key === 'Escape') closeSpanishModal();
       });
     })();
+
+    // Handle contact form submissions
+    document.querySelectorAll('.quote-form').forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const button = form.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
+        
+        try {
+          button.disabled = true;
+          button.textContent = 'Sending...';
+          
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              name: formData.get('name'),
+              phone: formData.get('phone'),
+              details: formData.get('details'),
+            }),
+          });
+          
+          const data = await response.json();
+          
+          if (data.success) {
+            // Show success message
+            const successMsg = document.createElement('div');
+            successMsg.className = 'success-message';
+            successMsg.textContent = 'Thank you! We\'ll be in touch soon.';
+            form.parentNode.insertBefore(successMsg, form);
+            
+            // Clear form
+            form.reset();
+            
+            // Remove success message after 5 seconds
+            setTimeout(() => successMsg.remove(), 5000);
+          } else {
+            alert('Error: ' + data.message);
+          }
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('Error submitting form. Please try again.');
+        } finally {
+          button.disabled = false;
+          button.textContent = originalText;
+        }
+      });
+    });
   </script>
 </body>
 </html>
