@@ -1558,4 +1558,25 @@ section[id],
   }
 }
 
+.success-message{
+  background-color:#d4edda;
+  border:1px solid #c3e6cb;
+  color:#155724;
+  padding:16px;
+  margin-bottom:16px;
+  border-radius:4px;
+  font-weight:500;
+  animation:slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn{
+  from{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
