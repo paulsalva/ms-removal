@@ -337,8 +337,9 @@
         <form class="quote-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="3897ab35-18c3-4153-9e9a-9a7c2e8e75cb">
           <label>Name<input type="text" name="name" placeholder="Your name" required></label>
-          <label>Phone<input type="tel" name="phone" placeholder="Your phone number" required></label>
-          <label>What do you need help with?<textarea name="details" rows="4" placeholder="Construction debris, brush removal, cleanout, snow removal, lawn care, power washing, or another job."></textarea></label>
+          <label>Phone<input type="tel" name="phone" placeholder="Your phone number" pattern="[0-9\-\(\)\s+]+" minlength="10" required></label>
+          <label>Email <span class="optional">(optional)</span><input type="email" name="email" placeholder="Your email"></label>
+          <label>What do you need help with?<textarea name="details" rows="4" placeholder="Construction debris, brush removal, cleanout, snow removal, lawn care, power washing, or another job." required></textarea></label>
           <button class="btn" type="submit">Request Quote</button>
         </form>
       </div>
@@ -370,8 +371,9 @@
         <form class="quote-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="3897ab35-18c3-4153-9e9a-9a7c2e8e75cb">
           <label>Nombre<input type="text" name="name" placeholder="Su nombre" required></label>
-          <label>Teléfono<input type="tel" name="phone" placeholder="Su número" required></label>
-          <label>¿Cómo podemos ayudarle?<textarea name="details" rows="2" placeholder="Detalles del trabajo"></textarea></label>
+          <label>Teléfono<input type="tel" name="phone" placeholder="Su número" pattern="[0-9\-\(\)\s+]+" minlength="10" required></label>
+          <label>Correo Electrónico <span class="optional">(opcional)</span><input type="email" name="email" placeholder="Su correo"></label>
+          <label>¿Cómo podemos ayudarle?<textarea name="details" rows="2" placeholder="Detalles del trabajo" required></textarea></label>
           <button class="btn" type="submit">Solicitar Cotización</button>
         </form>
         <p class="spanish-contact-phone">¿Prefiere llamar? <a href="tel:+12623415580">(262) 341-5580</a></p>
