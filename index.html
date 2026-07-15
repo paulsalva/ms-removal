@@ -337,7 +337,7 @@
         <form class="quote-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="3897ab35-18c3-4153-9e9a-9a7c2e8e75cb">
           <label>Name<input type="text" name="name" placeholder="Your name" required></label>
-          <label>Phone<input type="tel" name="phone" placeholder="Your phone number" pattern="[0-9\-\(\)\s+]+" minlength="10" required></label>
+          <label>Phone<input type="tel" name="phone" class="phone-input" placeholder="(333) 333-3333" required></label>
           <label>Email <span class="optional">(optional)</span><input type="email" name="email" placeholder="Your email"></label>
           <label>What do you need help with?<textarea name="details" rows="4" placeholder="Construction debris, brush removal, cleanout, snow removal, lawn care, power washing, or another job." required></textarea></label>
           <button class="btn" type="submit">Request Quote</button>
@@ -371,7 +371,7 @@
         <form class="quote-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="3897ab35-18c3-4153-9e9a-9a7c2e8e75cb">
           <label>Nombre<input type="text" name="name" placeholder="Su nombre" required></label>
-          <label>Teléfono<input type="tel" name="phone" placeholder="Su número" pattern="[0-9\-\(\)\s+]+" minlength="10" required></label>
+          <label>Teléfono<input type="tel" name="phone" class="phone-input" placeholder="(333) 333-3333" required></label>
           <label>Correo Electrónico <span class="optional">(opcional)</span><input type="email" name="email" placeholder="Su correo"></label>
           <label>¿Cómo podemos ayudarle?<textarea name="details" rows="2" placeholder="Detalles del trabajo" required></textarea></label>
           <button class="btn" type="submit">Solicitar Cotización</button>
@@ -557,6 +557,27 @@
         if (e.key === 'Escape') closeSpanishModal();
       });
     })();
+
+    // Format phone number as user types
+    function formatPhoneNumber(value) {
+      const cleaned = value.replace(/\D/g, '');
+      if (cleaned.length === 0) return '';
+      if (cleaned.length <= 3) return `(${cleaned}`;
+      if (cleaned.length <= 6) return `(${cleaned.slice(0, 3)}) ${cleaned.slice(3)}`;
+      return `(${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(6, 10)}`;
+    }
+
+    document.querySelectorAll('.phone-input').forEach(input => {
+      input.addEventListener('input', (e) => {
+        e.target.value = formatPhoneNumber(e.target.value);
+      });
+      
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && e.target.value.endsWith(' ')) {
+          e.target.value = e.target.value.slice(0, -1);
+        }
+      });
+    });
 
     // Handle contact form submissions with Web3Forms
     document.querySelectorAll('.quote-form').forEach(form => {
