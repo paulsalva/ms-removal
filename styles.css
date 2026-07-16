@@ -1255,6 +1255,72 @@ section[id],
 .platform-link:hover{
   background:rgba(229,154,57,.25);
   border-color:rgba(229,154,57,.6);
+}
+
+.google-rating-display{
+  margin-top:60px;
+  padding-top:40px;
+  border-top:1px solid rgba(255,255,255,.12);
+  text-align:center;
+}
+
+.google-rating-content{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:32px;
+}
+
+.google-logo-large{
+  width:80px;
+  height:80px;
+  filter:brightness(1.2);
+}
+
+.rating-info{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:8px;
+}
+
+.rating-number{
+  font-size:48px;
+  font-weight:700;
+  color:#fff;
+  line-height:1;
+}
+
+.rating-stars{
+  display:flex;
+  gap:6px;
+  font-size:28px;
+}
+
+.rating-star{
+  color:#e59a39;
+}
+
+@media(max-width:600px){
+  .google-rating-content{
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .google-logo-large{
+    width:60px;
+    height:60px;
+  }
+
+  .rating-number{
+    font-size:36px;
+  }
+
+  .rating-stars{
+    font-size:24px;
+    gap:4px;
+  }
+}
   transform:translateY(-2px);
 }
 .platform-link img,
