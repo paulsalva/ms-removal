@@ -1258,13 +1258,70 @@ section[id],
 }
 
 .reviews-bottom-section{
-  display:flex;
-  flex-direction:column;
+  display:grid;
+  grid-template-columns:1fr 1fr;
   align-items:center;
-  gap:40px;
+  gap:60px;
   margin-top:60px;
   padding-top:40px;
   border-top:1px solid rgba(255,255,255,.12);
+}
+
+.google-rating-display{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.google-rating-content{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+}
+
+.google-logo-large{
+  width:85px;
+  height:85px;
+  filter:brightness(1.2);
+}
+
+.rating-info{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+.rating-number{
+  font-size:72px;
+  font-weight:700;
+  color:#fff;
+  line-height:0.8;
+}
+
+.rating-stars{
+  display:flex;
+  gap:8px;
+  font-size:28px;
+}
+
+.rating-star{
+  color:#e59a39;
+}
+
+.reviews-footer{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.reviews-footer p{
+  margin:0 0 20px 0;
+  font-size:16px;
+  font-weight:500;
 }
 
 .google-rating-badge{
@@ -1307,25 +1364,21 @@ section[id],
 
 @media(max-width:768px){
   .reviews-bottom-section{
-    gap:32px;
+    grid-template-columns:1fr;
+    gap:40px;
   }
 
-  .google-rating-badge{
-    padding:18px 24px;
-    gap:12px;
+  .google-logo-large{
+    width:75px;
+    height:75px;
   }
 
-  .badge-google-logo{
-    width:42px;
-    height:42px;
+  .rating-number{
+    font-size:64px;
   }
 
-  .badge-rating{
-    font-size:36px;
-  }
-
-  .badge-stars{
-    font-size:22px;
+  .rating-stars{
+    font-size:24px;
   }
 
   .reviews-footer{
